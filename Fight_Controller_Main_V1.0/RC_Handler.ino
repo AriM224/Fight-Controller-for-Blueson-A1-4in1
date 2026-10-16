@@ -17,6 +17,7 @@ void update_channels()
   {
     lastPrintMs = millis();
     printEverything();  //for debugging
+    printEverythingESC();
   }
 }
 

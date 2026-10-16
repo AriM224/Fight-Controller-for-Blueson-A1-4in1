@@ -27,10 +27,10 @@ AlfredoCRSF crsf;
 const int NUM_CHANNELS = 10; //number of reciever channels to use
 
 //------ESC config--------------
-const int PIN_ESC_1 = 18;
-const int PIN_ESC_2 = 17;
+const int PIN_ESC_1 = 9;
+const int PIN_ESC_2 = 9;
 const int PIN_ESC_3 = 9;
-const int PIN_ESC_4 = 8;
+const int PIN_ESC_4 = 9;
 const uint8_t MOTOR_POLES = 14;
 const int PIN_ESC_L = PIN_ESC_1; //defines pins attached to right and left drive motors
 const int PIN_ESC_R = PIN_ESC_2;
@@ -39,8 +39,8 @@ AlfredoDShot esc_L;
 
 //=============GLOBAL VARIABLES==================
 //--------reciever----------
-int pwm[NUM_CHANNELS]; //list values from 1000-2000
-int duty[NUM_CHANNELS]; //list values from 0 - 100
+int pwm[NUM_CHANNELS+1]; //list values from 1000-2000
+int duty[NUM_CHANNELS+1]; //list values from 0 - 100
 bool rc_status = false; //whether getting rc signal, used for triggering failsafe
 //----------other----------
 float volts; //variable to store current battery voltage
@@ -50,6 +50,7 @@ int motor_L; //throttle for sending to esc
 int motor_R;
 int esc_R_rpm;
 int esc_L_rpm;
+int16_t throttle_print;
 unsigned long long motor_update = 0; //tracks how long since last motor update
 
 void setup()
@@ -68,8 +69,8 @@ void setup()
 
   crsf.begin(crsfSerial); // defaults to CRSF_ADDRESS_FLIGHT_CONTROLLER
   crsf.setDeviceName("AlfredoCRSF"); // answer device discovery pings
-  esc_R.begin(PIN_ESC_L, DSHOT600, true, MOTOR_POLES); //initialized dshot to a defined pin (pin 1 = M1)
-  esc_L.begin(PIN_ESC_R, DSHOT600, true, MOTOR_POLES);
+  esc_R.begin(PIN_ESC_R, DSHOT600, true, MOTOR_POLES); //initialized dshot to a defined pin (pin 1 = M1)
+  esc_L.begin(PIN_ESC_L, DSHOT600, true, MOTOR_POLES);
 }
 
 void loop()

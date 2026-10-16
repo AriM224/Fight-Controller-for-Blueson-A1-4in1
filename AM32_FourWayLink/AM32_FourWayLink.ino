@@ -64,7 +64,7 @@
 
 // ESC signal pins, in the order the configurator numbers them (ESC #1 first).
 // Rotini V4: {40, 41} for FOO and BAR.
-const int ESC_PINS[] = {40, 41};
+const int ESC_PINS[] = {18, 17};
 const uint8_t ESC_COUNT = sizeof(ESC_PINS) / sizeof(ESC_PINS[0]);
 
 const long ESC_BAUD = 19200;  // AM32 bootloader one-wire rate, 8N1
@@ -425,7 +425,8 @@ void mspReply(uint8_t cmd, const uint8_t *payload, uint8_t len, bool error) {
 
 // The '$' has been read. Request: $M< len cmd payload checksum.
 void handleMsp() {
-  if (usbReadByte(100) != 'M' || usbReadByte(100) != '<') return;
+  int m = usbReadByte(100), d = usbReadByte(100);
+  if (m != 'M' || d != '<') { dbgf("msp hdr %02x %02x\n", m, d); return; }
   int len = usbReadByte(100), cmd = usbReadByte(100);
   if (len < 0 || cmd < 0) return;
   uint8_t sum = len ^ cmd;
@@ -435,7 +436,8 @@ void handleMsp() {
     if (i < (int)sizeof(inParams)) inParams[i] = b;
     sum ^= b;
   }
-  if (usbReadByte(100) != sum) return;
+  if (usbReadByte(100) != sum) { dbgf("msp bad sum cmd %d\n", cmd); return; }
+  if (cmd != 0xF0) dbgf("msp cmd %d len %d\n", cmd, len);
 
   switch (cmd) {
     case MSP_API_VERSION: {
@@ -644,4 +646,5 @@ void loop() {
   int b = usbReadByte(10);
   if (b == CMD_LOCAL_ESCAPE) handleFourWay();
   else if (b == '$') handleMsp();
+  else if (b >= 0) dbgf("?%02x ", b);
 }
