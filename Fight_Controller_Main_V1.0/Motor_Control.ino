@@ -31,6 +31,10 @@ int throttle3D(int16_t throttle)
 {
   throttle = throttle * 10;
 	//clamp throttle between -99 and 99
+	if (throttle < 20 && throttle > -20)
+	{
+		throttle = 0;
+	}
 	if (throttle > 999)
 	{
 		throttle = 999;
@@ -51,6 +55,10 @@ int throttle3D(int16_t throttle)
 	else
 	{
 		throttle += 48; //offsets by dshot min
+	}
+	if (throttle == 48)
+	{
+		throttle = 0;
 	}
 	throttle_print = throttle;
 	return throttle;

@@ -17,7 +17,7 @@
 
 //-------Wifi config---------
 const char *ssid = "Combat-Robot-Motherboard"; //wifi ssid
-const char *password = "admin"; //wifi password
+const char *password = ""; //wifi password
 
 //------Reciever config-----------
 #define PIN_RX 16
@@ -28,9 +28,9 @@ const int NUM_CHANNELS = 10; //number of reciever channels to use
 
 //------ESC config--------------
 const int PIN_ESC_1 = 9;
-const int PIN_ESC_2 = 9;
-const int PIN_ESC_3 = 9;
-const int PIN_ESC_4 = 9;
+const int PIN_ESC_2 = 17;
+const int PIN_ESC_3 = 18;
+const int PIN_ESC_4 = 8;
 const uint8_t MOTOR_POLES = 14;
 const int PIN_ESC_L = PIN_ESC_1; //defines pins attached to right and left drive motors
 const int PIN_ESC_R = PIN_ESC_2;
@@ -78,5 +78,4 @@ void loop()
   ArduinoOTA.handle();
   update_channels();
   update_motors();
-  delay(10);
 }

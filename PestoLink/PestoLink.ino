@@ -39,6 +39,8 @@ uint16_t throttleValue(float stick) {
   if (!THREE_D_MODE) return stick > 0 ? 48 + (uint16_t)(stick * 1999.0f + 0.5f) : 0;
   if (!(fabsf(stick) > 0)) return 0;  // also catches NaN
   uint16_t steps = (uint16_t)(fabsf(stick) * 999.0f + 0.5f);
+  Serial.println("throttle");
+  Serial.print((stick > 0 ? 1048 : 48) + steps);
   return (stick > 0 ? 1048 : 48) + steps;
 }
 
