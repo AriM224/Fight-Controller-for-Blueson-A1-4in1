@@ -5,10 +5,25 @@ void update_motors()
   motor_update = esp_timer_get_time();
 	int thr  = duty[2];  // whichever channels you use
 	int steer = duty[1];
-	motor_L = constrain(thr + steer, -100, 100);
-	motor_R = constrain(thr - steer, -100, 100);
-  esc_R.send(throttle3D(motor_R));  //send throttle -100 to 100
+	int wep = duty[3];
+	if (duty[5] > 80)
+	{
+		wep_reversed = true;
+	}
+	else
+	{
+		wep_reversed = false;
+	}
+	motor_L = constrain(-thr - steer, -100, 100);
+	motor_R = constrain(-thr + steer, -100, 100);
+	motor_W = map(wep, -100, 100, 0, 100);
+	if (wep_reversed == true)
+	{
+		motor_W = motor_W * -1;
+	}
+	esc_R.send(throttle3D(motor_R));  //send throttle -100 to 100
   esc_L.send(throttle3D(motor_L));
+	esc_W.send(throttle3D(motor_W));
   esc_R_rpm = esc_R.rpm();
   esc_L_rpm = esc_L.rpm();
 }
@@ -17,8 +32,8 @@ void printEverythingESC()
 {
 	Serial.print("Right ESC Throttle:");
 	Serial.print(motor_R);
-	Serial.print("\tLeft ESC Throttle:");
-	Serial.print(motor_L);
+	Serial.print("\Wep ESC Throttle:");
+	Serial.print(motor_W);
 	Serial.print("\tRight ESC RPM:");
 	Serial.print(esc_R_rpm);
 	Serial.print("\tLeft ESC RPM:");
@@ -31,7 +46,7 @@ int throttle3D(int16_t throttle)
 {
   throttle = throttle * 10;
 	//clamp throttle between -99 and 99
-	if (throttle < 20 && throttle > -20)
+	if (throttle < 80 && throttle > -80)
 	{
 		throttle = 0;
 	}

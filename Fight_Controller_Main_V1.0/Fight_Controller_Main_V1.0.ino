@@ -15,6 +15,8 @@
 #include <Arduino.h>
 #include <EEPROM.h>
 
+
+
 //-------Wifi config---------
 const char *ssid = "Combat-Robot-Motherboard"; //wifi ssid
 const char *password = ""; //wifi password
@@ -34,8 +36,10 @@ const int PIN_ESC_4 = 8;
 const uint8_t MOTOR_POLES = 14;
 const int PIN_ESC_L = PIN_ESC_1; //defines pins attached to right and left drive motors
 const int PIN_ESC_R = PIN_ESC_2;
+const int PIN_ESC_W = PIN_ESC_3;
 AlfredoDShot esc_R;
 AlfredoDShot esc_L;
+AlfredoDShot esc_W;
 
 //=============GLOBAL VARIABLES==================
 //--------reciever----------
@@ -48,6 +52,8 @@ uint32_t lastHeartbeatMs = 0;
 uint32_t lastPrintMs = 0;
 int motor_L; //throttle for sending to esc
 int motor_R;
+int motor_W;
+bool wep_reversed = false;
 int esc_R_rpm;
 int esc_L_rpm;
 int16_t throttle_print;
@@ -57,6 +63,7 @@ void setup()
 {
   AlfredoDShot::releaseBootloader(PIN_ESC_L);  // must be first, see AlfredoDShot.h pulls signal low to reset esc
   AlfredoDShot::releaseBootloader(PIN_ESC_R);  // must be first, see AlfredoDShot.h
+  AlfredoDShot::releaseBootloader(PIN_ESC_W);  // must be first, see AlfredoDShot.h
   Serial.begin(115200);
   Serial.println("Boot");
   ArduinoOTA.setHostname("esp32-ap"); //wifi ota config
@@ -71,6 +78,7 @@ void setup()
   crsf.setDeviceName("AlfredoCRSF"); // answer device discovery pings
   esc_R.begin(PIN_ESC_R, DSHOT600, true, MOTOR_POLES); //initialized dshot to a defined pin (pin 1 = M1)
   esc_L.begin(PIN_ESC_L, DSHOT600, true, MOTOR_POLES);
+  esc_W.begin(PIN_ESC_W, DSHOT600, true, MOTOR_POLES);
 }
 
 void loop()

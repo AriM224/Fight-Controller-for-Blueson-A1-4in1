@@ -21,7 +21,7 @@
 #include <AlfredoDShot.h>
 #include <PestoLink-Receive.h>
 
-const int PIN_ESC = 9;
+const int PIN_ESC = 18;
 const uint8_t MOTOR_POLES = 14;    // magnet count, 14 for a 12N14P outrunner
 const bool THREE_D_MODE = true;    // match the ESC's "3D mode" setting
 const float MAX_THROTTLE = 1.0f;  // 0..1, limit for bench testing
