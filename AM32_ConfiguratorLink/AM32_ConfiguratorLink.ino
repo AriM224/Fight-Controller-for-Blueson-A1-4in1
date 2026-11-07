@@ -64,7 +64,7 @@
 
 // ESC signal pins, in the order the configurator numbers them (ESC #1 first).
 // Rotini V4: {40, 41} for FOO and BAR.
-const int ESC_PINS[] = {18, 17};
+const int ESC_PINS[] = {9,17,18,8};
 const uint8_t ESC_COUNT = sizeof(ESC_PINS) / sizeof(ESC_PINS[0]);
 
 const long ESC_BAUD = 19200;  // AM32 bootloader one-wire rate, 8N1

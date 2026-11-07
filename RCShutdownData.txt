@@ -1,0 +1,378 @@
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-41 dBm  LQ:93%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-5  R:-3  W:-58 (W reversed)
+ESC R: 0 rpm  79C  14.00V  17.0A
+ESC L: 0 rpm  81C  14.00V  17.0A
+ESC W: 13351 rpm  95C  14.00V  17.0A
+Pack: 14.00V  51.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-41 dBm  LQ:95%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-9  R:-7  W:-58 (W reversed)
+ESC R: 0 rpm  79C  14.00V  17.0A
+ESC L: 259 rpm  81C  14.00V  17.0A
+ESC W: 13435 rpm  95C  14.00V  17.0A
+Pack: 14.00V  51.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-41 dBm  LQ:95%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-9  R:-9  W:-58 (W reversed)
+ESC R: 209 rpm  79C  14.00V  17.0A
+ESC L: 215 rpm  81C  14.00V  17.0A
+ESC W: 13310 rpm  95C  14.00V  17.0A
+Pack: 14.00V  51.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-41 dBm  LQ:98%  SNR:13  RFmode:7  TXpower:8
+Throttle  L:-32  R:-40  W:-58 (W reversed)
+ESC R: 2076 rpm  79C  14.00V  18.0A
+ESC L: 1920 rpm  81C  14.00V  19.0A
+ESC W: 13310 rpm  95C  14.00V  19.0A
+Pack: 14.00V  56.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-44 dBm  LQ:96%  SNR:13  RFmode:7  TXpower:8
+Throttle  L:-66  R:-82  W:-58 (W reversed)
+ESC R: 10277 rpm  79C  14.00V  25.0A
+ESC L: 7519 rpm  81C  14.00V  27.0A
+ESC W: 13351 rpm  95C  13.75V  27.0A
+Pack: 14.00V  79.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-44 dBm  LQ:96%  SNR:13  RFmode:7  TXpower:8
+Throttle  L:-63  R:-85  W:-58 (W reversed)
+ESC R: 11552 rpm  79C  13.75V  26.0A
+ESC L: 7049 rpm  81C  14.00V  27.0A
+ESC W: 13393 rpm  95C  13.75V  25.0A
+Pack: 13.75V  78.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-44 dBm  LQ:96%  SNR:13  RFmode:7  TXpower:8
+Throttle  L:-61  R:-87  W:-58 (W reversed)
+ESC R: 11905 rpm  79C  13.75V  25.0A
+ESC L: 7338 rpm  81C  14.00V  25.0A
+ESC W: 13310 rpm  95C  13.75V  25.0A
+Pack: 13.75V  75.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:97%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-59  R:-89  W:-58 (W reversed)
+ESC R: 11774 rpm  79C  13.75V  25.0A
+ESC L: 6781 rpm  81C  14.00V  25.0A
+ESC W: 13351 rpm  95C  13.75V  25.0A
+Pack: 13.75V  75.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:92%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 11806 rpm  79C  13.75V  25.0A
+ESC L: 6340 rpm  81C  14.00V  25.0A
+ESC W: 12210 rpm  95C  14.00V  25.0A
+Pack: 13.75V  75.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:92%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12495 rpm  79C  13.75V  27.0A
+ESC L: 7708 rpm  81C  13.75V  26.0A
+ESC W: 12351 rpm  95C  14.00V  26.0A
+Pack: 13.75V  79.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:92%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12531 rpm  79C  13.75V  25.0A
+ESC L: 7736 rpm  81C  13.75V  26.0A
+ESC W: 12280 rpm  95C  14.00V  26.0A
+Pack: 13.75V  77.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:68%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 11938 rpm  79C  13.75V  25.0A
+ESC L: 6211 rpm  81C  13.75V  25.0A
+ESC W: 12315 rpm  95C  13.75V  25.0A
+Pack: 13.75V  75.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:68%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12531 rpm  79C  13.75V  26.0A
+ESC L: 7849 rpm  81C  13.75V  26.0A
+ESC W: 12386 rpm  95C  13.75V  26.0A
+Pack: 13.75V  78.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:68%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12495 rpm  79C  13.75V  25.0A
+ESC L: 5919 rpm  81C  13.75V  25.0A
+ESC W: 12531 rpm  95C  13.75V  26.0A
+Pack: 13.75V  76.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:45%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12175 rpm  79C  13.75V  25.0A
+ESC L: 6513 rpm  81C  13.75V  25.0A
+ESC W: 12568 rpm  95C  13.75V  26.0A
+Pack: 13.75V  76.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:45%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12245 rpm  79C  13.75V  26.0A
+ESC L: 7239 rpm  81C  13.75V  26.0A
+ESC W: 12531 rpm  95C  13.75V  26.0A
+Pack: 13.75V  78.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:45%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 11521 rpm  79C  13.75V  26.0A
+ESC L: 7338 rpm  81C  13.75V  26.0A
+ESC W: 12568 rpm  95C  13.75V  26.0A
+Pack: 13.75V  78.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: UP
+  RSSI1:-46 dBm  LQ:45%  SNR:12  RFmode:7  TXpower:8
+Throttle  L:-60  R:-88  W:-58 (W reversed)
+ESC R: 12072 rpm  79C  13.75V  27.0A
+ESC L: 5936 rpm  81C  13.75V  26.0A
+ESC W: 12605 rpm  95C  13.75V  26.0A
+Pack: 13.75V  79.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 7708 rpm  79C  13.75V  26.0A
+ESC L: 4995 rpm  81C  13.75V  27.0A
+ESC W: 12422 rpm  95C  13.75V  26.0A
+Pack: 13.75V  79.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 443 rpm  79C  14.50V  1.0A
+ESC L: 0 rpm  81C  13.75V  1.0A
+ESC W: 10634 rpm  95C  14.50V  3.0A
+Pack: 14.50V  5.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  1.0A
+ESC L: 0 rpm  81C  13.75V  0.0A
+ESC W: 10327 rpm  95C  14.50V  0.0A
+Pack: 14.50V  1.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  13.75V  0.0A
+ESC W: 9967 rpm  95C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 9674 rpm  95C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 6614 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 6377 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 5729 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 5126 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 4762 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 4588 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 4418 rpm  96C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  81C  14.50V  0.0A
+ESC W: 3669 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  82C  14.50V  0.0A
+ESC W: 3276 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  82C  14.50V  0.0A
+ESC W: 2147 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  82C  14.50V  0.0A
+ESC W: 1756 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  82C  14.50V  0.0A
+ESC W: 1633 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
+
+===== STATUS =====
+WiFi AP clients: 1 | UDP log -> port 4210
+Reset reason: 1
+RC link: DOWN (failsafe)
+Throttle  L:0  R:0  W:0 (W reversed)
+ESC R: 0 rpm  79C  14.50V  0.0A
+ESC L: 0 rpm  82C  14.50V  0.0A
+ESC W: 1326 rpm  97C  14.50V  0.0A
+Pack: 14.50V  0.0A
