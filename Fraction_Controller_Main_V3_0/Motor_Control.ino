@@ -93,12 +93,21 @@ void get_telem()
     }
   }
 
-  // Total current = sum of whichever ESCs are reporting
-  pack_amps = 0;
+  // The Blueson A1 has one shared current sensor, so every ESC reports the TOTAL
+  // pack current (the same number). Do NOT add them up: that would read 3x too high.
+  // Use the average of the ESCs that are reporting. If you ever move to a board with
+  // one sensor per ESC, change this back to a sum.
+  float amp_sum = 0;
+  int amp_count = 0;
   for (int i = 0; i < 3; i++)
   {
-    if (!isnan(esc_amps[i])) pack_amps += esc_amps[i];
+    if (!isnan(esc_amps[i]))
+    {
+      amp_sum += esc_amps[i];
+      amp_count++;
+    }
   }
+  pack_amps = (amp_count > 0) ? (amp_sum / amp_count) : 0;
 }
 
 void printEscTelem(const char *name, int i)
