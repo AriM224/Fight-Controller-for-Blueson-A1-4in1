@@ -73,9 +73,9 @@ AlfredoCRSF crsf;
 const int NUM_CHANNELS = 10; //number of reciever channels to use
 
 //------ESC config--------------
-const int PIN_ESC_1 = 9;
+const int PIN_ESC_1 = 18;
 const int PIN_ESC_2 = 17;
-const int PIN_ESC_3 = 18;
+const int PIN_ESC_3 = 9;
 const int PIN_ESC_4 = 8;
 const uint8_t MOTOR_POLES = 14;
 // AM32 2.20 and older send ESC current in 0.5 A steps, but the library reads it as
