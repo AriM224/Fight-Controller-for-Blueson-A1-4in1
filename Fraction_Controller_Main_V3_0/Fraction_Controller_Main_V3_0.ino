@@ -26,6 +26,13 @@ while ($true) { [Text.Encoding]::ASCII.GetString($u.Receive([ref]$ep)) }
 
 
 
+//-------Watchdog config---------
+// If loop() does not finish for this long (code frozen, stuck in a while loop, a
+// driver hanging), the ESP32 resets itself. On reset the DShot signal goes away and
+// the ESCs stop the motors. See start_watchdog() and the esp_task_wdt_reset() call at
+// the end of loop().
+#define WDT_TIMEOUT_MS 1000
+
 //-------Wifi config---------
 const char *ssid = "Combat-Robot-Motherboard"; //wifi ssid
 const char *password = "youarewhatyouyeet"; //wifi password
@@ -127,6 +134,10 @@ void setup()
   Serial.println("Boot");
   ArduinoOTA.setHostname("esp32-ap"); //wifi ota config
   ArduinoOTA.setPassword(password); //enter this if window opens in arduino IDE asking for pswrd
+  // An OTA upload blocks loop() for many seconds, which would trip the watchdog in the
+  // middle of the upload. Turn it off for the upload and back on if the upload fails.
+  ArduinoOTA.onStart([]() { esp_task_wdt_delete(NULL); });
+  ArduinoOTA.onError([](ota_error_t error) { esp_task_wdt_add(NULL); });
   WiFi.softAP(ssid, password);
   logUdp.begin(LOG_PORT);
   ArduinoOTA.begin();  //starts ota
@@ -139,6 +150,27 @@ void setup()
   esc_R.begin(PIN_ESC_R, DSHOT600, true, MOTOR_POLES); //initialized dshot to a defined pin (pin 1 = M1)
   esc_L.begin(PIN_ESC_L, DSHOT600, true, MOTOR_POLES);
   esc_W.begin(PIN_ESC_W, DSHOT600, true, MOTOR_POLES);
+
+  start_watchdog();  // keep last: only code that runs after this point is watched
+}
+
+// Makes the main loop task (the one running loop()) reset the ESP32 if it goes
+// WDT_TIMEOUT_MS without calling esp_task_wdt_reset().
+void start_watchdog()
+{
+#if ESP_ARDUINO_VERSION_MAJOR >= 3
+  // Arduino-ESP32 3.x: the watchdog is already running (watching the idle tasks), so
+  // reconfigure it. idle_core_mask = 0 means only our loop task is watched.
+  esp_task_wdt_config_t cfg;
+  cfg.timeout_ms = WDT_TIMEOUT_MS;
+  cfg.idle_core_mask = 0;
+  cfg.trigger_panic = true;                 // reset the chip on timeout
+  if (esp_task_wdt_reconfigure(&cfg) != ESP_OK) esp_task_wdt_init(&cfg);
+#else
+  // Arduino-ESP32 2.x: timeout is in whole seconds
+  esp_task_wdt_init(WDT_TIMEOUT_MS / 1000, true);
+#endif
+  esp_task_wdt_add(NULL);                   // NULL = watch this task (loopTask)
 }
 
 void loop()
@@ -153,6 +185,7 @@ void loop()
     print_status();
     last_print = millis();
   }
+  esp_task_wdt_reset();  // feed the watchdog: a whole pass through loop() finished
 }
 
 // Prints one status block: connection state + current motor/ESC state
@@ -163,7 +196,10 @@ void print_status()
   Log.printf("WiFi AP clients: %d | UDP log -> port %u\n",
             WiFi.softAPgetStationNum(), LOG_PORT);
   esp_reset_reason_t r = esp_reset_reason();
-  Log.printf("Reset reason: %d%s\n", (int)r, r == ESP_RST_BROWNOUT ? " (BROWNOUT)" : "");
+  const char *r_note = "";
+  if (r == ESP_RST_BROWNOUT) r_note = " (BROWNOUT)";
+  else if (r == ESP_RST_TASK_WDT || r == ESP_RST_INT_WDT || r == ESP_RST_WDT) r_note = " (WATCHDOG)";
+  Log.printf("Reset reason: %d%s\n", (int)r, r_note);
   Log.printf("RC link: %s\n", rc_status ? "UP" : "DOWN (failsafe)");
 
   if (rc_status) {
